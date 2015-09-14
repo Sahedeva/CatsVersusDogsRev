@@ -53,7 +53,6 @@ if (winner == 1) {
 	$('.playOne').append("  is Victorious!");
 	$('.playTwo').prepend(name2+"  ");
 	$('.playTwo').append("  is Defeated!");
-	alert("ok");
 	} else if (winner == 2) {
 		$('.first_avatar').css({ "height": "125px", "width": "125px" });
 		$('.twoWins').css('display', 'inline');
