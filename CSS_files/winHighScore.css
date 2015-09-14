@@ -1,0 +1,90 @@
+body {
+	background-image: url(https://victoriaiskak.files.wordpress.com/2015/05/nature-wallpapers-beautiful-nature-background-catalog-scenery-sky-image-field-wallpaper-430441.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.totals {
+	margin-top: 100px;
+	font-size: 24px;
+	color: blue;
+	font-weight: bold;
+}
+
+.oneWins {
+	display: none;
+}
+
+.twoWins {
+	display: none;
+}
+
+.playOne {
+	font-size: 30px;
+	font-weight: bold;
+	color:red;
+	margin-top: 25px;
+	padding-left: 25px;
+	text-align: center;
+}
+
+.playTwo {
+	font-size: 30px;
+	font-weight: bold;
+	color:yellow;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.playMouse {
+	font-size: 30px;
+	font-weight: bold;
+	color:purple;
+	margin-top: 25px;
+	text-align: center;
+}
+
+.scoreTitle {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.mouseWins {
+	display: none;
+}
+
+.first_avatar {
+	height: 175px;
+	width: 175px;
+	border-radius: 100px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.second_avatar {
+	height: 175px;
+	width: 175px;
+	border-radius: 100px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.mouse_avatar {
+	height: 175px;
+	width: 175px;
+	border-radius: 100px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#inputOrReplay {
+	text-align: center;
+	font-size: 30px;
+	border-radius: 10px;
+	font-weight: bold;
+}
+
+a {
+	padding-left: 25px;
+	padding-right: 25px;
+}

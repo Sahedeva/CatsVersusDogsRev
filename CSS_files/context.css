@@ -1,0 +1,93 @@
+body {
+	background-image: url(https://s-media-cache-ak0.pinimg.com/236x/f7/7e/cc/f77eccdd08fe02de714221f17ea2fe87.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+button {
+	height: 200px;
+	width: 200px;
+	background-image: url(http://staff.gsacrd.ab.ca/~tbontus/FOV2-0007EEAB/FOV2-0007F0B2/S0284B764-0284B764.0/Planet%20Earth%20image.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -32px;
+	border-radius: 2px;
+	border: 2px solid black;
+}
+
+h2 {
+	font-size: 24px;
+	color: silver;
+}
+
+.firstPlayerName {
+	text-align: center;
+	color: gold;
+	margin-left: 60px;
+}
+
+.secondPlayerName {
+	text-align: center;
+	color: gold;
+	margin-left: 40px;
+}
+
+#game {
+	background-color: purple;
+}
+
+#titleHead {
+	text-align: center; 
+	color: red;
+}
+
+.first_avatar {
+	height: 150px;
+	width: 150px;
+	border-radius: 100px;
+	visibility: hidden;
+}
+
+.first_turn {
+	font-weight: bold;
+	color:red;
+	font-size: 30px;
+	margin-left: 83px;
+	margin-top: -30px
+}
+
+.second_turn {
+	font-weight: bold;
+	color:red;
+	font-size: 30px;
+	margin-left: 80px;
+	margin-top: -30px;
+}
+
+.mouse_area {
+	display: block;
+	font-weight: bold;
+	color:red;
+	font-size: 30px;
+}
+
+.second_avatar {
+	height: 150px;
+	width: 150px;
+	border-radius: 100px;
+	visibility: hidden;
+}
+
+.mouse {
+	height: 150px;
+	width: 150px;
+	/*background-image: url(http://staff.gsacrd.ab.ca/~tbontus/FOV2-0007EEAB/FOV2-0007F0B2/S0284B764-0284B764.0/Planet%20Earth%20image.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;*/
+	border-radius: 100px;
+	visibility: hidden;
+}
+
+.seen {
+	visibility: visible;
+}

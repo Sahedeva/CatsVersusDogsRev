@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cats V Dogs High Scores</title>
+	<link rel="stylesheet" type="text/css" href="CSS_files/normalize.css">
+	<link rel="stylesheet" type="text/css" href="CSS_files/winHighScore.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+</head>
+<body>
+	<audio autoplay loop>
+  		<source src="Sounds/237.mp3" type="audio/mpeg">
+	</audio>
+<!-- will need to get variables from local storage for winner (also add to cat, dog, or mouse variable) and then display on the left side the winner's name and avatar prominently or the mouse if a tie
+then write a for loop to iterate through high score array and reorder it by score - each array element will be 2 element array itself [[name,#wins]] then display high score list in the middle (ordered list - name and #wins)
+and finally on the right will be cat wins, dog wins, mouse wins
+after this need to have link tabs (return to game - continue play (hopefully game board will wipe on page refresh from link - if not will need to set a playagain variable to do this)) and (return to input page for new players - will need to add check name functionality so that player names don't get overwritten)
+ -->
+ <div class="container">
+		<div class="row">
+
+			<div class="oneWins playOne col-xs-6"></div>
+			<div class="oneWins playTwo col-xs-6"></div>
+
+			<div class="twoWins playTwo col-xs-6"></div>
+			<div class="twoWins playOne col-xs-6"></div>
+
+			<div class="mouseWins playMouse col-xs-12"></div>
+				<div class="row">
+					<div class="mouseWins playOne col-xs-6"></div>
+					<div class="mouseWins playTwo col-xs-6"></div>
+				</div>
+
+		</div>
+
+		<div class="totals row">
+			
+			<div class="highScore scoreTitle col-xs-6">High Scores
+				<div class="row">
+					<div class="nameAvatar col-xs-8"></div>
+					<div class="wins col-xs-2">Wins<br></div>
+				</div>
+			</div>
+			<div class="catWins col-xs-2">Cat Wins </div>
+			<div class="dogWins col-xs-2">Dog Wins </div>
+			<div class="mouseScore col-xs-2">Mouse Wins </div>
+
+		</div>
+
+	</div>
+	<br>
+	<br>
+	<br>
+	<nav id="inputOrReplay"><a href="context.html">Rematch!</a><a href="index.html">Reset with New Players</a></nav>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="JS_files/winnerHighScore.js"></script>
+</body>
+</html>

@@ -2,12 +2,17 @@
 <html>
 <head>
 	<title>Cats Versus Dogs</title>
-	<link rel="stylesheet" type="text/css" href="normalize.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="CSS_files/normalize.css">
+	<link rel="stylesheet" type="text/css" href="CSS_files/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 </head>
 <body>
 	<header>
 		<h1 id="headTitle">Cats versus Dogs (a game of world domination)</h1>
+		<audio autoplay>
+			<source src="Sounds/Resonance_choir_-_O_Fortuna_-_Carl_Orff_(mp3.pm).mp3" type="audio/mpeg">
+		</audio>
 		<ul id="gameRules">
 			<li>2 sides (Cats: X's) and (Dogs: O's)</li>
 			<li>Game board is a 3 x 3 grid</li>
@@ -19,28 +24,84 @@
 	  victory condition met</li>
 	</header>
 	<div id="nameAgeInput">
-		<form>
-			First Player Name:<br>
-			<input id="name0" type="text" name="name"><br>
-			Age:<br>
-			<input id="age0" type="number" name="age"><br>
-  			Second Player Name:<br>
+	
+			First Player Name:
+			<input id="name0" type="text" name="name">
+			Age:
+			<input id="age0" type="number" name="age">
+  			Second Player Name:
   			<input id="name1" type="text" name="name">
-  			<br>
-  			Age:<br>
+  	
+  			Age:
   			<input id="age1" type="number" name="age">
-  			<br>
   			<button id="submit">Submit</button>
-		</form>
+
 	</div>
-	<div id="playerSelection">
+	<div id="playOrder"></div>
+	<div id="sideSelection">
+		<button class ="choice" id = "catChoice" type="button" value="Cat"></button>	
+		<button class="choice" id = "dogChoice" type="button" value="Dog"></button>
 	</div>
-	<div id="sideSelection"></div>
+	<div id="catAvatar">
+			<button class="choice1" id="cat0" type="button" value="0"></button>
+			<button class="choice1" id="cat1" type="button" value="1"></button>
+			<button class="choice1" id="cat2"type="button" value="2"></button>
+			<button class="choice1" id="cat3"type="button" value="3"></button>
+	</div>
+	<div id="dogAvatar">
+			<button class="choice1" id="dog0" value="4"></button>
+			<button class="choice1" id="dog1" value="5"></button>
+			<button class="choice1" id="dog2" value="6"></button>
+			<button class="choice1" id="dog3" value="7"></button>
+	</div>
+
+		<div id="catAvatar2">
+			<button class="choice2" id="cat0" type="button" value="0"></button>
+			<button class="choice2" id="cat1" type="button" value="1"></button>
+			<button class="choice2" id="cat2"type="button" value="2"></button>
+			<button class="choice2" id="cat3"type="button" value="3"></button>
+	</div>
+	<div id="dogAvatar2">
+			<button class="choice2" id="dog0" value="4"></button>
+			<button class="choice2" id="dog1" value="5"></button>
+			<button class="choice2" id="dog2" value="6"></button>
+			<button class="choice2" id="dog3" value="7"></button>
+	</div>
+	<nav id="pageLink"><a href="context.html">Play Game</a></nav>
+
+	<!-- <div class="container">
+		<div class="row">
+		
+			<div class="box col-xs-4"><button id ="UL"></button></div>
+			<div class="box col-xs-4"><button id ="UM"></button></div>
+			<div class="box col-xs-4"><button id ="UR"></button></div>
+			
+
+			
+			<div class="box col-xs-4"><button id ="ML"></button></div>
+			<div class="box col-xs-4"><button id ="C"></button></div>
+			<div class="box col-xs-4"><button id ="MR"></button></div>
+			
+			
+			<div class="box col-xs-4"><button id ="LL"></button></div>
+			<div class="box col-xs-4"><button id ="LM"></button></div>
+			<div class="box col-xs-4"><button id ="LR"></button></div>
+			
+
+
+		</div>
+
+
+
+
+
+	</div> -->
 
 
 	<footer>
 	</footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="catVsDog.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="JS_files/catVsDogFinal.js"></script>
 </body>
 </html>
