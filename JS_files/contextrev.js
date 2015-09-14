@@ -65,12 +65,12 @@ function winnerDetermination () {
 	
 		// winnerOfGame = "Cat";
 		if (mouseGame === 10) {
-			$('.first_turn').prepend("The Cat is victorious!!! YAY!");
+			// $('.first_turn').prepend("The Cat is victorious!!! YAY!");
 			winningPlayer = 1;
 			localStorage.setItem("winningPlayer", winningPlayer);
 			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 5000);	
 		} else {
-			$('.second_turn').prepend("The Cat is victorious!!! YAY!");
+			// $('.second_turn').prepend("The Cat is victorious!!! YAY!");
 			winningPlayer = 2;
 			localStorage.setItem("winningPlayer", winningPlayer);
 			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 5000);
@@ -87,12 +87,12 @@ function winnerDetermination () {
 		)  { 
 		// winnerOfGame = "Dog";
 		if (mouseGame === 10) {
-			$('.second_turn').prepend("The Dog has won, Woof Woof!");
+			// $('.second_turn').prepend("The Dog has won, Woof Woof!");
 			winningPlayer = 2;
 			localStorage.setItem("winningPlayer", winningPlayer);
 			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 5000);		
 		} else {
-			$('.first_turn').prepend("The Dog has won, Woof Woof!");
+			// $('.first_turn').prepend("The Dog has won, Woof Woof!");
 			winningPlayer = 1;
 			localStorage.setItem("winningPlayer", winningPlayer);
 			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 5000);		
@@ -108,8 +108,8 @@ function winnerDetermination () {
 		}
 		setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 5000);
 		
-		$('.mouse').toggleClass('seen');
-		$(".mouse_area").prepend("The Mouse has won, that is terrible!");
+		// $('.mouse').toggleClass('seen');
+		// $(".mouse_area").prepend("The Mouse has won, that is terrible!");
 	}	else {
 		$('.first_avatar').toggleClass('seen');
 		$('.second_avatar').toggleClass('seen');
