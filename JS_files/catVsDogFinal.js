@@ -20,6 +20,8 @@ $(function () {
 				$("#playOrder").append("Of course, age comes before beauty!\n");
 			} else {
 				$("#playOrder").append("Since you are both the same age. The first warrior entry will play first.\n");
+				players.push($('#name0').val());
+				players.push($('#name1').val());
 			}	
 			
 			playerOneName = players[0];
@@ -77,6 +79,9 @@ $(function () {
 				localStorage.setItem("secondSide", playerTwoSide);
 				localStorage.setItem("firstAvatar", playerOneAvatar);
 				localStorage.setItem("secondAvatar", playerTwoAvatar);
+				localStorage.setItem("gameNumber", 1);
+				localStorage.setItem("firstPlayerwins", 0);
+				localStorage.setItem("secondPlayerwins", 0);
 			} else if (playerTwoSide === "Cat") {
 				$("#catAvatar2").hide();
 				$("#dogAvatar2").hide();
@@ -87,6 +92,9 @@ $(function () {
 				localStorage.setItem("secondSide", playerTwoSide);
 				localStorage.setItem("firstAvatar", playerOneAvatar);
 				localStorage.setItem("secondAvatar", playerTwoAvatar);
+				localStorage.setItem("gameNumber", 1);
+				localStorage.setItem("firstPlayerwins", 0);
+				localStorage.setItem("secondPlayerwins", 0);
 			}
 		});
 

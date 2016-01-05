@@ -24,21 +24,30 @@ h2 {
 	text-align: center;
 	color: gold;
 	margin-left: 60px;
+	text-shadow: 2px 2px 2px black;
 }
 
 .secondPlayerName {
 	text-align: center;
 	color: gold;
 	margin-left: 40px;
+	text-shadow: 2px 2px 2px black;
 }
 
 #game {
 	background-color: purple;
 }
 
+#gameNumber {
+	text-align: center;
+	color: red;
+	text-shadow: 1px 1px 1px black;
+}
+
 #titleHead {
 	text-align: center; 
 	color: red;
+	text-shadow: 2px 2px 2px black;
 }
 
 .first_avatar {
@@ -46,6 +55,7 @@ h2 {
 	width: 150px;
 	border-radius: 100px;
 	visibility: hidden;
+	box-shadow: 2px 2px 2px purple;
 }
 
 .first_turn {
@@ -76,6 +86,7 @@ h2 {
 	width: 150px;
 	border-radius: 100px;
 	visibility: hidden;
+	box-shadow: 2px 2px 2px green;
 }
 
 .mouse {

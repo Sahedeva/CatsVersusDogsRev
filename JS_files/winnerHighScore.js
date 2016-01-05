@@ -6,7 +6,8 @@ var side2 = localStorage.getItem("secondSide");
 var avatar1 =localStorage.getItem("firstAvatar");
 var avatar2 = localStorage.getItem("secondAvatar");
 var winner = localStorage.getItem("winningPlayer");
-var gameNumber = localStorage.getItem("numberOfGames")
+var gameNumber = localStorage.getItem("gameNumber");
+var recentGame = localStorage.getItem("recentGame");
 
 
 var oneWinner = name1 + "is Victorious!";
@@ -14,7 +15,7 @@ var oneLoser = name1 + "is Defeated!";
 
 var twoWinner = name2 + "is Victorious!";
 var twoLoser = name2 + "is Defeated!";
-console.log (name1+name2+side1+side2+avatar1+avatar2+winner);
+console.log (name1+name2+side1+side2+avatar1+avatar2+winner+recentGame+gameNumber);
 
 
 var avatars = [];
@@ -30,7 +31,9 @@ avatars[7] = "http://orig05.deviantart.net/50ce/f/2013/073/3/f/huckleberry_hound
 
 //construct players avatar img
 var avatarPlayerOne = "";
+var avatarDisplayOne = "";
 avatarPlayerOne = "<img class='first_avatar' src='"+avatars[avatar1]+"''>";
+avatarDisplayOne = "<img class='avatar1' src='"+avatars[avatar1]+"''>";
 $('.playOne').append(avatarPlayerOne);
 // avatarPlayerOne = "'url("+avatars[avatar1]+")'";
 // console.log(avatarPlayerOne+oneWinner+oneLoser);
@@ -38,7 +41,9 @@ $('.playOne').append(avatarPlayerOne);
 
 
 var avatarPlayerTwo = "";
+var avatarDisplayTwo = "";
 avatarPlayerTwo = "<img class='second_avatar' src='"+avatars[avatar2]+"''>"
+avatarDisplayTwo = "<img class='avatar2' src='"+avatars[avatar2]+"''>";
 // avatarPlayerTwo = "'url("+avatars[avatar2]+")'";
 $('.playTwo').append(avatarPlayerTwo);
 // $('.playTwo').css('background-image', avatarPlayerTwo);
@@ -74,60 +79,86 @@ if (winner == 1) {
 		// $('.playTwo').prepend(twoLoser);
 	};
 
-if (gameNumber == null) {
-	var wins1 = 0;
-	var wins2 = 0;
-	var catW = 0;
-	var dogW = 0;
-	var mouseW = 0;
-	var gameNumber = 0;
+var wins1 = localStorage.getItem("firstPlayerwins");
+var wins2 = localStorage.getItem("secondPlayerwins");
+var catW = localStorage.getItem("catWins");
+var dogW = localStorage.getItem("dogWins");
+var mouseW = localStorage.getItem("mouseWins");
+if (catW) {
+	console.log("catwins already has a value");
 } else {
-	var wins1 = localStorage.getItem("firstPlayerwins");
-	var wins2 = localStorage.getItem("secondPlayerwins");
-	var catW = localStorage.getItem("catWins");
-	var dogW = localStorage.getItem("dogWins");
-	var mouseW = localStorage.getItem("mouseWins");
+	var catW = 0;
 };
+if (dogW) {
+	console.log("dogwins already has a value");
+} else {
+	var dogW = 0;
+};
+if (mouseW) {
+	console.log("mousewins already has a value");
+} else {
+	var mouseW = 0;
+}
 
-if (winner == 1) {
+if (winner == 1 && recentGame == 1) {
+		console.log("got here - player one winner");
+		localStorage.setItem("recentGame", 0);
 		wins1++
 		gameNumber++
 		if (side1 === "Cat") {
 			catW++
 			$('.catWins').append(catW);
+			$('.dogWins').append(dogW);
+			$('.mouseScore').append(mouseW);
 		} else {
 			dogW++
+			$('.catWins').append(catW);
 			$('.dogWins').append(dogW);
+			$('.mouseScore').append(mouseW);
 		}
 		localStorage.setItem("firstPlayerwins",wins1);
 		localStorage.setItem("secondPlayerwins",wins2);
 		localStorage.setItem("catWins",catW);
 		localStorage.setItem("dogWins",dogW);
 		localStorage.setItem("mouseWins",mouseW);
-		localStorage.setItem("numberOfGames",gameNumber);
-		$('.nameAvatar').append(name1);
-		$('.nameAvatar').append(avatarPlayerOne)
-		$('.wins').append(wins1)
-	} else if (winner == 2) {
+		localStorage.setItem("gameNumber",gameNumber);
+		$('.name1').append(name1);
+		$('.avatar1').append(avatarDisplayOne)
+		$('.wins1').append(wins1)
+		$('.name2').append(name2);
+		$('.avatar2').append(avatarDisplayTwo)
+		$('.wins2').append(wins2)
+	} else if (winner == 2 && recentGame == 1) {
+		console.log("got here - player two winner");
+		localStorage.setItem("recentGame", 0);
 		wins2++
 		gameNumber++
 		if (side2 === "Cat") {
 			catW++
 			$('.catWins').append(catW);
+			$('.dogWins').append(dogW);
+			$('.mouseScore').append(mouseW);
 		} else {
 			dogW++
+			$('.catWins').append(catW);
 			$('.dogWins').append(dogW);
+			$('.mouseScore').append(mouseW);
 		}
 		localStorage.setItem("firstPlayerwins",wins1);
 		localStorage.setItem("secondPlayerwins",wins2);
 		localStorage.setItem("catWins",catW);
 		localStorage.setItem("dogWins",dogW);
 		localStorage.setItem("mouseWins",mouseW);
-		localStorage.setItem("numberOfGames",gameNumber);
-		$('.nameAvatar').append(name2);
-		$('.nameAvatar').append(avatarPlayerTwo)
-		$('.wins').append(wins2)
-	} else if (winner == 3) {
+		localStorage.setItem("gameNumber",gameNumber);
+		$('.name1').append(name1);
+		$('.avatar1').append(avatarDisplayOne)
+		$('.wins1').append(wins1)
+		$('.name2').append(name2);
+		$('.avatar2').append(avatarDisplayTwo)
+		$('.wins2').append(wins2)
+	} else if (winner == 3 && recentGame == 1) {
+		console.log("got here - mouse winner");
+		localStorage.setItem("recentGame", 0);
 		mouseW++
 		gameNumber++
 		localStorage.setItem("firstPlayerwins",wins1);
@@ -135,7 +166,26 @@ if (winner == 1) {
 		localStorage.setItem("catWins",catW);
 		localStorage.setItem("dogWins",dogW);
 		localStorage.setItem("mouseWins",mouseW);
-		localStorage.setItem("numberOfGames",gameNumber);
+		localStorage.setItem("gameNumber",gameNumber);
+		$('.name1').append(name1);
+		$('.avatar1').append(avatarDisplayOne)
+		$('.wins1').append(wins1)
+		$('.name2').append(name2);
+		$('.avatar2').append(avatarDisplayTwo)
+		$('.wins2').append(wins2)
+		$('.catWins').append(catW);
+		$('.dogWins').append(dogW);
+		$('.mouseScore').append(mouseW);
+	} else {
+		console.log("got here - recent game is 0 (i.e. refresh page)");
+		$('.name1').append(name1);
+		$('.avatar1').append(avatarDisplayOne)
+		$('.wins1').append(wins1)
+		$('.name2').append(name2);
+		$('.avatar2').append(avatarDisplayTwo)
+		$('.wins2').append(wins2)
+		$('.catWins').append(catW);
+		$('.dogWins').append(dogW);
 		$('.mouseScore').append(mouseW);
 	}
 

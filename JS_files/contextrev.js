@@ -5,10 +5,12 @@ var side1 = localStorage.getItem("firstSide");
 var side2 = localStorage.getItem("secondSide");
 var avatar1 =localStorage.getItem("firstAvatar");
 var avatar2 = localStorage.getItem("secondAvatar");
-
+var gameNumber = localStorage.getItem("gameNumber");
+console.log ('gameNumber: '+ gameNumber);
 
 $('.firstPlayerName').append(name1);
 $('.secondPlayerName').append(name2);
+$('#gameNumber').append(gameNumber)
 
 
 var avatars = [];
@@ -68,12 +70,14 @@ function winnerDetermination () {
 			// $('.first_turn').prepend("The Cat is victorious!!! YAY!");
 			winningPlayer = 1;
 			localStorage.setItem("winningPlayer", winningPlayer);
-			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 5000);	
+			localStorage.setItem("recentGame", 1);
+			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);	
 		} else {
 			// $('.second_turn').prepend("The Cat is victorious!!! YAY!");
 			winningPlayer = 2;
 			localStorage.setItem("winningPlayer", winningPlayer);
-			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 5000);
+			localStorage.setItem("recentGame", 1);
+			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);
 		}
 	} else if (
 		(gameBoardArray[0]==="D"&&gameBoardArray[3]==="D"&&gameBoardArray[6]==="D")||
@@ -90,23 +94,26 @@ function winnerDetermination () {
 			// $('.second_turn').prepend("The Dog has won, Woof Woof!");
 			winningPlayer = 2;
 			localStorage.setItem("winningPlayer", winningPlayer);
-			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 5000);		
+			localStorage.setItem("recentGame", 1);
+			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);		
 		} else {
 			// $('.first_turn').prepend("The Dog has won, Woof Woof!");
 			winningPlayer = 1;
 			localStorage.setItem("winningPlayer", winningPlayer);
-			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 5000);		
+			localStorage.setItem("recentGame", 1);
+			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);		
 		}
 		
 	} else if (counter === mouseGame) {
 		winningPlayer = 3;
+		localStorage.setItem("recentGame", 1);
 		localStorage.setItem("winningPlayer", winningPlayer);
 		if (mouseGame === 10) {
 			$('.first_avatar').toggleClass('seen');
 		} else {
 			$('.second_avatar').toggleClass('seen');
 		}
-		setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 5000);
+		setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);
 		
 		// $('.mouse').toggleClass('seen');
 		// $(".mouse_area").prepend("The Mouse has won, that is terrible!");
