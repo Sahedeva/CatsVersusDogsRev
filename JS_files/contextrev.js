@@ -158,7 +158,7 @@ $("button").on("click", function () {
 		boardArray[$(this).val()] = 9;
 		gameBoardArray[$(this).val()] = "C";
 		$('.catMeow')[0].play();
-		$(this).css('background-image', 'url(http:img1.wikia.nocookie.net/__cb20140519075925/thehungergames/images/8/84/Kitten-16219-1280x800.jpg)');
+		$(this).css('background-image', 'url(http://www.img1.wikia.nocookie.net/__cb20140519075925/thehungergames/images/8/84/Kitten-16219-1280x800.jpg)');
 		// win fxn
 		winnerDetermination();
 		// if (winnerOfGame === "Cat" || winnerOfGame === "Dog" || winnerOfGame === "Mouse") {
