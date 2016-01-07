@@ -11,12 +11,15 @@ header {
 }
 #gameRules {
 	list-style-type: none;
+	font-size: 20px;
+	color: gold;
 }
 
 #nameAgeInput {
 	color:red;
 	font-weight: bold;
 	font-size: 20px;
+	text-align: center;
 }
 
 #age1, #age0 {
@@ -33,11 +36,17 @@ input {
 	background-color: blue;
 }
 
+#submitDiv {
+	text-align: center;
+}
+
 #playOrder {
 	font-size: 20px;
 	font-weight: bold;
-	color:green;
+	color:beige;
+	text-align: center;
 }
+
 #catChoice {
 	height: 175px;
 	width: 175px;
@@ -60,28 +69,35 @@ input {
 
 #pageLink {
 	color: purple;
-	font-size: 20px;
+	font-size: 24px;
 	border-radius: 10px;
+	text-align: center;
+	display: none;
 }
 
 #sideSelection {
 	display: none;
+	text-align: center;
 }
 
 #catAvatar {
 	display: none;
+	text-align: center;
 }
 
 #dogAvatar {
 	display: none;
+	text-align: center;
 }
 
 #catAvatar2 {
 	display: none;
+	text-align: center;
 }
 
 #dogAvatar2 {
 	display: none;
+	text-align: center;
 }
 
 #cat0 {

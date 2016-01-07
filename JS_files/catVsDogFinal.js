@@ -96,6 +96,7 @@ $(function () {
 				localStorage.setItem("firstPlayerwins", 0);
 				localStorage.setItem("secondPlayerwins", 0);
 			}
+			$("#pageLink").toggle();
 		});
 
 	
