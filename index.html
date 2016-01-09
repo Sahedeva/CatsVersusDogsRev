@@ -8,10 +8,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 </head>
 <body>
+	<audio id='rumble'>
+  		<source src="Sounds/DJ_Tools___Lets_Get_Ready_to_Rumble_Sound_Effect.mp3" type="audio/mpeg">
+	</audio>
 	<header>
 		<br>
 		<h1 id="headTitle">Cats versus Dogs (a game of world domination)</h1>
-		<audio autoplay loop>
+		<audio id="carmina" autoplay loop>
 			<source src="Sounds/Resonance_choir_-_O_Fortuna_-_Carl_Orff_(mp3.pm).mp3" type="audio/mpeg">
 		</audio>
 		<ul id="gameRules">
@@ -72,7 +75,7 @@
 			<button class="choice2" id="dog3" value="7"></button>
 	</div>
 	<br><br>
-	<nav id="pageLink"><a href="context.html">Play Game</a></nav>
+	<nav id="pageLink"><a id="playAnchor" href="context.html">Play Game</a></nav>
 
 	<!-- <div class="container">
 		<div class="row">

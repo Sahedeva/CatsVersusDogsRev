@@ -1,4 +1,8 @@
 $(function () {
+$('#joyOde').on('canplaythrough', function() {
+    if(this.currentTime < 12){this.currentTime = 12;}
+    $('#joyOde')[0].play();
+});
 var name1 = localStorage.getItem("firstPlayer");
 var name2 = localStorage.getItem("secondPlayer");
 var side1 = localStorage.getItem("firstSide");

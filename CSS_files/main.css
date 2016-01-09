@@ -9,6 +9,7 @@ header {
 	font-weight: bold;
 	text-align: center;
 }
+
 #gameRules {
 	list-style-type: none;
 	font-size: 20px;
@@ -171,4 +172,11 @@ input {
 	background-image-size: 85%; 
 	background-repeat: no-repeat;
 	background-position: -4px;
+}
+
+#playAnchor {
+	color: red;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    font-size: 34px;
 }
