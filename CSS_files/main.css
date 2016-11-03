@@ -1,5 +1,5 @@
 body {
-	background-image: url(http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/space-wallpapers-3.jpg);
+	background-image: url('../Images/space.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -52,7 +52,7 @@ input {
 	height: 175px;
 	width: 175px;
 	border-radius: 100px;
-	background-image: url(http://www.img1.wikia.nocookie.net/__cb20140519075925/thehungergames/images/8/84/Kitten-16219-1280x800.jpg);
+	background-image: url('../Images/cuteKitten.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: -20px;
@@ -62,7 +62,7 @@ input {
 	height: 175px;
 	width: 175px;
 	border-radius: 100px;
-	background-image: url(http://www.hd-wallpapersdownload.com/upload/bulk-upload/cute-puppy-photo.jpg);
+	background-image: url('../Images/cute-puppy-photo.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: -20px;
@@ -102,76 +102,75 @@ input {
 }
 
 #cat0 {
-	height: 175px;
-	width: 175px;
-	border-radius: 100px;
-	background-image: url(http://s3.amazonaws.com/images.hitfix.com/assets/2083/catniss.jpg);
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catArcher.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: -5px;
+	background-position: -13px;
 }
 #cat1 {
-	height: 175px;
-	width: 175px;
-	border-radius: 100px;
-	background-image: url(https://wedothings.files.wordpress.com/2013/04/thor_kitty_by_jennyparks-d61y6yj.jpg);
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catWarrior.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: -1px;
+	background-position: -3px;
 }
 #cat2 {
-	height: 175px;
-	width: 175px;
-	border-radius: 100px;
-	background-image: url(http://i.imgur.com/f13K3uk.png);
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catRobot.png');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 1px -7px;
+	background-position: -18px;
 }
 #cat3 {
-	height: 175px;
-	width: 175px;
-	border-radius: 100px;
-	background-image: url(http://www.catster.com/wp-content/uploads/2015/06/alana-mccarthy-cat-star-trek.jpg);
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catTrek.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 #dog0 {
-	height: 175px;
-	width: 175px;
-	border-radius: 100px;
-	background-image: url(https://static1.e926.net/data/0a/0c/0a0c8d10a0394f078885ebce9a3c3ac2.png);
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/dogArcher.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 0 -2px;
+	background-position: -27px 1px;
 }
 #dog1 {
-	height: 175px;
-	width: 175px;
-	border-radius: 100px;
-	background-image: url(https://img1.etsystatic.com/000/0/5244093/il_570xN.244547633.jpg);
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/dogWarrior.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 2px -30px;
 }
 #dog2 {
-	height: 175px;
-	width: 175px;
-	border-radius: 100px;
-	background-image: url(http://img07.deviantart.net/1208/i/2009/087/5/4/wizard_dog_collab_by_crazyyellowfox.png);
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/dogWizard.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 #dog3 {
-	height: 175px;
-	width: 175px;
-	border-radius: 100px;
-	background-image: url(http://orig05.deviantart.net/50ce/f/2013/073/3/f/huckleberry_hound_the_jedi_knight_by_mcsaurus-d5xzzfl.jpg);
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/dogJedi.jpg');
 	background-size: cover;
-	background-image-size: 85%; 
+	background-image-size: 85%;
 	background-repeat: no-repeat;
-	background-position: -4px;
+	background-position: -20px;
 }
 
 #playAnchor {

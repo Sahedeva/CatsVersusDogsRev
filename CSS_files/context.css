@@ -1,5 +1,5 @@
 body {
-	background-image: url(https://s-media-cache-ak0.pinimg.com/236x/f7/7e/cc/f77eccdd08fe02de714221f17ea2fe87.jpg);
+	background-image: url('../Images/mordor.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -7,11 +7,12 @@ body {
 button {
 	height: 200px;
 	width: 200px;
-	background-image: url(http://staff.gsacrd.ab.ca/~tbontus/FOV2-0007EEAB/FOV2-0007F0B2/S0284B764-0284B764.0/Planet%20Earth%20image.jpg);
+	background-image: url('../Images/Earth.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: -32px;
 	border-radius: 2px;
+	background-color: black;
 	border: 2px solid black;
 }
 
@@ -45,9 +46,82 @@ h2 {
 }
 
 #titleHead {
-	text-align: center; 
+	text-align: center;
 	color: red;
 	text-shadow: 2px 2px 2px black;
+}
+
+#cat0 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catArcher.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -13px;
+}
+#cat1 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catWarrior.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -3px;
+}
+#cat2 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catRobot.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -18px;
+}
+#cat3 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catTrek.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#dog0 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/dogArcher.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -27px 1px;
+}
+#dog1 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+;
+	background-image: url('../Images/dogWarrior.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#dog2 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/dogWizard.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#dog3 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/dogJedi.jpg');
+	background-size: cover;
+	background-image-size: 85%;
+	background-repeat: no-repeat;
+	background-position: -20px;
 }
 
 .first_avatar {

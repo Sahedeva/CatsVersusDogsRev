@@ -21,66 +21,54 @@ var twoWinner = name2 + "is Victorious!";
 var twoLoser = name2 + "is Defeated!";
 console.log (name1+name2+side1+side2+avatar1+avatar2+winner+recentGame+gameNumber);
 
-
-var avatars = [];
-avatars[0] = "http://s3.amazonaws.com/images.hitfix.com/assets/2083/catniss.jpg";
-avatars[1] = "https://wedothings.files.wordpress.com/2013/04/thor_kitty_by_jennyparks-d61y6yj.jpg";
-avatars[2] = "http://i.imgur.com/f13K3uk.png";
-avatars[3] = "http://www.catster.com/wp-content/uploads/2015/06/alana-mccarthy-cat-star-trek.jpg";
-
-avatars[4] = "https://static1.e926.net/data/0a/0c/0a0c8d10a0394f078885ebce9a3c3ac2.png";
-avatars[5] = "https://img1.etsystatic.com/000/0/5244093/il_570xN.244547633.jpg";
-avatars[6] = "http://img07.deviantart.net/1208/i/2009/087/5/4/wizard_dog_collab_by_crazyyellowfox.png";
-avatars[7] = "http://orig05.deviantart.net/50ce/f/2013/073/3/f/huckleberry_hound_the_jedi_knight_by_mcsaurus-d5xzzfl.jpg";
-
 //construct players avatar img
-var avatarPlayerOne = "";
-var avatarDisplayOne = "";
-avatarPlayerOne = "<img class='first_avatar' src='"+avatars[avatar1]+"''>";
-avatarDisplayOne = "<img class='avatar1' src='"+avatars[avatar1]+"''>";
-$('.playOne').append(avatarPlayerOne);
-// avatarPlayerOne = "'url("+avatars[avatar1]+")'";
-// console.log(avatarPlayerOne+oneWinner+oneLoser);
-// $('.playOne').css('background-image', avatarPlayerOne);
+var avaP1 = "<div style='display: inline-block;' class='ava_P1'></div>";
+$('.playOne').append(avaP1);
+$('.ava_P1').attr('id', avatar1);
 
+var avaP2 = "<div style='display: inline-block;' class='ava_P2'></div>";
+$('.playTwo').append(avaP2);
+$('.ava_P2').attr('id', avatar2);
 
-var avatarPlayerTwo = "";
-var avatarDisplayTwo = "";
-avatarPlayerTwo = "<img class='second_avatar' src='"+avatars[avatar2]+"''>"
-avatarDisplayTwo = "<img class='avatar2' src='"+avatars[avatar2]+"''>";
-// avatarPlayerTwo = "'url("+avatars[avatar2]+")'";
-$('.playTwo').append(avatarPlayerTwo);
-// $('.playTwo').css('background-image', avatarPlayerTwo);
-
-$('.playMouse').append('<img class ="mouse_avatar" src="http://www.kachinahouse.com/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/d/l/dl_mouse4_1.jpg">');
+var avaM = "<div style='display: inline-block;' class='ava_M'></div>";
+$('.playMouse').append(avaM);
+$('.ava_M').attr('id', 'mouse');
 
 //logic statements
 if (winner == 1) {
-	$('.second_avatar').css({ "height": "125px", "width": "125px" });
 	$('.oneWins').css('display', 'inline');
-	$('.playOne').prepend(name1+"  ");
-	$('.playOne').append("  is Victorious!");
-	$('.playTwo').prepend(name2+"  ");
-	$('.playTwo').append("  is Defeated!");
+  $('.playOne').css('padding', '0px');
+	$('.playOne').prepend("<div style='display: inline-block; vertical-align: middle; height: 265px;'>"+name1+"&nbsp</div>");
+  $('.ava_P1').attr('id', avatar1);
+	$('.playOne').append("<div style='display: inline-block; vertical-align: middle; height: 265px;'>&nbspis Victorious!</div>");
+  $('.playTwo').css('padding', '36px 0px 0px 0px');
+	$('.playTwo').prepend("<div style='display: inline-block; vertical-align: middle; height: 175px;'>"+name2+"&nbsp</div>");
+  $('.ava_P2').attr('id', avatar2+"s");
+	$('.playTwo').append("<div style='display: inline-block; vertical-align: middle; height: 175px;'>&nbspis Defeated!</div>");
 	} else if (winner == 2) {
-		$('.first_avatar').css({ "height": "125px", "width": "125px" });
 		$('.twoWins').css('display', 'inline');
-		$('.playOne').prepend(name1+"  ");
-		$('.playOne').append("  is Defeated!");
-		$('.playTwo').prepend(name2+"  ");
-		$('.playTwo').append("  is Victorious!");
+    $('.playOne').css('padding', '36px 0px 0px 0px');
+		$('.playOne').prepend("<div style='display: inline-block; vertical-align: middle; height: 175px;'>"+name1+"&nbsp</div>");
+    $('.ava_P1').attr('id', avatar1+"s");
+		$('.playOne').append("<div style='display: inline-block; vertical-align: middle; height: 175px;'>&nbspis Defeated!</div>");
+    $('.playTwo').css('padding', '0px');
+    $('.playTwo').prepend("<div style='display: inline-block; vertical-align: middle; height: 265px;'>"+name2+"&nbsp</div>");
+    $('.ava_P2').attr('id', avatar2);
+  	$('.playTwo').append("<div style='display: inline-block; vertical-align: middle; height: 265px;'>&nbspis Victorious!</div>");
 	} else if (winner == 3) {
-		$('.first_avatar').css({ "height": "125px", "width": "125px" });
-		$('.second_avatar').css({ "height": "125px", "width": "125px" });
 		$('.mouseWins').css('display', 'inline');
-		$('.playMouse').prepend("Mouse is  ");
-		$('.playMouse').append("  Victorious!");
-		$('.playOne').prepend(name1+"  ");
-		$('.playOne').append("  is Defeated!");
-		$('.playTwo').prepend(name2+"  ");
-		$('.playTwo').append("  is Defeated!");
-		// $('.playOne').prepend(oneLoser);
-		// $('.playTwo').prepend(twoLoser);
+    $('.playMouse').css('padding', '0px');
+  	$('.playMouse').prepend("<div style='display: inline-block; vertical-align: middle; height: 265px;'>Mouse&nbsp</div>");
+    $('.ava_M').attr('id', "mouse");
+  	$('.playMouse').append("<div style='display: inline-block; vertical-align: middle; height: 265px;'>&nbspis Victorious!</div>");
+    $('.playOne').css('margin-top', '-175px');
+		$('.playOne').prepend("<div style='display: inline-block; vertical-align: middle; height: 175px;'>"+name1+"&nbsp</div>");
+    $('.ava_P1').attr('id', avatar1+"s");
+		$('.playOne').append("<div style='display: inline-block; vertical-align: middle; height: 175px;'>&nbspis Defeated!</div>");
+    $('.playTwo').css('margin-top', '-175px');
+  	$('.playTwo').prepend("<div style='display: inline-block; vertical-align: middle; height: 175px;'>"+name2+"&nbsp</div>");
+    $('.ava_P2').attr('id', avatar2+"s");
+  	$('.playTwo').append("<div style='display: inline-block; vertical-align: middle; height: 175px;'>&nbspis Defeated!</div>");
 	};
 
 var wins1 = localStorage.getItem("firstPlayerwins");
@@ -127,10 +115,10 @@ if (winner == 1 && recentGame == 1) {
 		localStorage.setItem("mouseWins",mouseW);
 		localStorage.setItem("gameNumber",gameNumber);
 		$('.name1').append(name1);
-		$('.avatar1').append(avatarDisplayOne)
+    $('.avatar1').attr('id', avatar1+"s");
 		$('.wins1').append(wins1)
 		$('.name2').append(name2);
-		$('.avatar2').append(avatarDisplayTwo)
+    $('.avatar2').attr('id', avatar2+"s");
 		$('.wins2').append(wins2)
 	} else if (winner == 2 && recentGame == 1) {
 		console.log("got here - player two winner");
@@ -154,11 +142,11 @@ if (winner == 1 && recentGame == 1) {
 		localStorage.setItem("dogWins",dogW);
 		localStorage.setItem("mouseWins",mouseW);
 		localStorage.setItem("gameNumber",gameNumber);
-		$('.name1').append(name1);
-		$('.avatar1').append(avatarDisplayOne)
+    $('.name1').append(name1);
+    $('.avatar1').attr('id', avatar1+"s");
 		$('.wins1').append(wins1)
 		$('.name2').append(name2);
-		$('.avatar2').append(avatarDisplayTwo)
+    $('.avatar2').attr('id', avatar2+"s");
 		$('.wins2').append(wins2)
 	} else if (winner == 3 && recentGame == 1) {
 		console.log("got here - mouse winner");
@@ -171,22 +159,22 @@ if (winner == 1 && recentGame == 1) {
 		localStorage.setItem("dogWins",dogW);
 		localStorage.setItem("mouseWins",mouseW);
 		localStorage.setItem("gameNumber",gameNumber);
-		$('.name1').append(name1);
-		$('.avatar1').append(avatarDisplayOne)
+    $('.name1').append(name1);
+    $('.avatar1').attr('id', avatar1+"s");
 		$('.wins1').append(wins1)
 		$('.name2').append(name2);
-		$('.avatar2').append(avatarDisplayTwo)
+    $('.avatar2').attr('id', avatar2+"s");
 		$('.wins2').append(wins2)
 		$('.catWins').append(catW);
 		$('.dogWins').append(dogW);
 		$('.mouseScore').append(mouseW);
 	} else {
 		console.log("got here - recent game is 0 (i.e. refresh page)");
-		$('.name1').append(name1);
-		$('.avatar1').append(avatarDisplayOne)
+    $('.name1').append(name1);
+    $('.avatar1').attr('id', avatar1+"s");
 		$('.wins1').append(wins1)
 		$('.name2').append(name2);
-		$('.avatar2').append(avatarDisplayTwo)
+    $('.avatar2').attr('id', avatar2+"s");
 		$('.wins2').append(wins2)
 		$('.catWins').append(catW);
 		$('.dogWins').append(dogW);

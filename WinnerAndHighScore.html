@@ -19,38 +19,42 @@ after this need to have link tabs (return to game - continue play (hopefully gam
  <div class="container">
 		<div class="row">
 
-			<div class="oneWins playOne col-xs-6"></div>
-			<div class="oneWins playTwo col-xs-6"></div>
+			<div class="oneWins playOne fix1 col-xs-6"></div>
+			<div class="oneWins playTwo fix2 col-xs-6"></div>
 
-			<div class="twoWins playTwo col-xs-6"></div>
-			<div class="twoWins playOne col-xs-6"></div>
+			<div class="twoWins playTwo fix1 col-xs-6"></div>
+			<div class="twoWins playOne fix2 col-xs-6"></div>
 
 			<div class="mouseWins playMouse col-xs-12"></div>
 				<div class="row">
 					<div class="mouseWins playOne col-xs-6"></div>
 					<div class="mouseWins playTwo col-xs-6"></div>
 				</div>
-
 		</div>
 
 		<div class="totals row">
-			
 			<div class="highScore scoreTitle col-xs-6">Current Series
-				<div class="row">
-					<div class="name1 col-xs-12"></div>
-					<div class="avatar1 col-xs-8"></div>
-					<div class="wins1 col-xs-2">Wins<br></div>
-					<div class="name2 col-xs-12"></div>
-					<div class="avatar2 col-xs-8"></div>
-					<div class="wins2 col-xs-2">Wins<br></div>
-				</div>
+				<table style="padding:30px;text-align:center;">
+					<thead style="padding:10px;">
+					  <th class="name1"></th>
+						<th>&nbsp&nbspWins&nbsp&nbsp</th>
+					  <th class="name2"></th>
+					  <th>&nbsp&nbspWins&nbsp&nbsp</th>
+					</thead>
+					<tbody>
+					  <tr>
+					    <td style="width:200px;"><div style="position: relative; left: 30%;" class="avatar1"></div></td>
+					    <td class="wins1"></td>
+					    <td style="width:200px;"><div style="position: relative; left: 30%;" class="avatar2"></div></td>
+					    <td class="wins2"></td>
+					  </tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="catWins col-xs-2">Cat Wins </div>
 			<div class="dogWins col-xs-2">Dog Wins </div>
 			<div class="mouseScore col-xs-2">Mouse Wins </div>
-
 		</div>
-
 	</div>
 	<nav id="inputOrReplay"><a id="rematch" href="context.html">Rematch!</a><a id="reset" href="index.html">Reset with New Players</a></nav>
 

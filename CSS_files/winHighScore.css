@@ -1,11 +1,183 @@
 body {
-	background-image: url(https://victoriaiskak.files.wordpress.com/2015/05/nature-wallpapers-beautiful-nature-background-catalog-scenery-sky-image-field-wallpaper-430441.jpg);
+	background-image: url('../Images/victory.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height:667px;
+}
+
+.fix1 {
+	width: 51.333333% !important;
+}
+.fix2 {
+	width: 48.666667% !important;
+}
+
+#mouse {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/avaMouseW.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -13px;
+}
+
+#cat0 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catArcher.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -13px;
+}
+
+#cat1 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catWarrior.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -3px;
+}
+#cat2 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catRobot.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -18px;
+}
+#cat3 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/catTrek.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
+#dog0 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/dogArcher.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -27px 1px;
+}
+#dog1 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+;
+	background-image: url('../Images/dogWarrior.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#dog2 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/dogWizard.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#dog3 {
+	width: 150px;
+	height: 230px;
+	border-radius: 50px;
+	background-image: url('../Images/dogJedi.jpg');
+	background-size: cover;
+	background-image-size: 85%;
+	background-repeat: no-repeat;
+	background-position: -20px;
+}
+
+#cat0s {
+	width: 75px;
+	height: 150px;
+	border-radius: 25px;
+	background-image: url('../Images/catArcher.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -29px;
+}
+
+#cat1s {
+	width: 75px;
+	height: 150px;
+	border-radius: 25px;
+	background-image: url('../Images/catWarrior.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -8px;
+}
+
+#cat2s {
+	width: 75px;
+	height: 150px;
+	border-radius: 25px;
+	background-image: url('../Images/catRobot.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -18px;
+}
+
+#cat3s {
+	width: 75px;
+	height: 150px;
+	border-radius: 25px;
+	background-image: url('../Images/catTrek.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -6px;
+}
+
+#dog0s {
+	width: 75px;
+	height: 150px;
+	border-radius: 25px;
+	background-image: url('../Images/dogArcher.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -24px;
+}
+#dog1s {
+	width: 75px;
+	height: 150px;
+	border-radius: 25px;
+	background-image: url('../Images/dogWarrior.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -3px;
+}
+
+#dog2s {
+	width: 75px;
+	height: 150px;
+	border-radius: 25px;
+	background-image: url('../Images/dogWizard.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -9px;
+}
+
+#dog3s {
+	width: 75px;
+	height: 150px;
+	border-radius: 25px;
+	background-image: url('../Images/dogJedi.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -20px;
+}
+
 .totals {
-	margin-top: 100px;
+	position: relative;
+	top: -50px;
 	font-size: 24px;
 	color: blue;
 	font-weight: bold;
@@ -24,7 +196,7 @@ body {
 	font-weight: bold;
 	color:red;
 	margin-top: 25px;
-	padding-left: 25px;
+	padding: 0px;
 	text-align: center;
 }
 
@@ -33,6 +205,7 @@ body {
 	font-weight: bold;
 	color:yellow;
 	margin-top: 25px;
+	padding: 0px;
 	text-align: center;
 }
 
@@ -46,7 +219,10 @@ body {
 
 .scoreTitle {
 	text-align: center;
-	text-decoration: underline;
+}
+
+th {
+	text-align: center !important;
 }
 
 .mouseWins {
@@ -86,6 +262,8 @@ body {
 }
 
 #inputOrReplay {
+	position: relative;
+	top: 50px;
 	text-align: center;
 	font-size: 30px;
 	border-radius: 10px;

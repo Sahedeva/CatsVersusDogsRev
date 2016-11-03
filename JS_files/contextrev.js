@@ -32,13 +32,14 @@ if (counter%2 === 0) {
 	$('.firstPlayerName').append(name2);
 	$('.secondPlayerName').append(name1);
 	//construct players avatar img
-	var avatarPlayerOne = "";
-	avatarPlayerOne = "<img class='first_avatar' src='"+avatars[avatar2]+"''>"
-	$('.first_turn').html(avatarPlayerOne);
-	var avatarPlayerTwo = "";
-	avatarPlayerTwo = "<img class='second_avatar' src='"+avatars[avatar1]+"''>"
-	$('.second_turn').html(avatarPlayerTwo);
-
+	// var avatarPlayerOne = "";
+	// avatarPlayerOne = "<img class='first_avatar' src='"+avatars[avatar2]+"''>";
+	// $('.first_turn').html(avatarPlayerOne);
+	$('.first_turn').attr('id', avatar2);
+	// var avatarPlayerTwo = "";
+	// avatarPlayerTwo = "<img class='second_avatar' src='"+avatars[avatar1]+"''>"
+	// $('.second_turn').html(avatarPlayerTwo);
+	$('.second_turn').attr('id', avatar1);
 	} else {
 		console.log("Play order:");
 		console.log("First is "+name1+" who is the "+side1);
@@ -46,12 +47,14 @@ if (counter%2 === 0) {
 		$('.firstPlayerName').append(name1);
 		$('.secondPlayerName').append(name2);
 		//construct players avatar img
-		var avatarPlayerOne = "";
-		avatarPlayerOne = "<img class='first_avatar' src='"+avatars[avatar1]+"''>"
-		$('.first_turn').append(avatarPlayerOne);
-		var avatarPlayerTwo = "";
-		avatarPlayerTwo = "<img class='second_avatar' src='"+avatars[avatar2]+"''>"
-		$('.second_turn').append(avatarPlayerTwo);
+		// var avatarPlayerOne = "";
+		// avatarPlayerOne = "<img class='first_avatar' src='"+avatars[avatar1]+"''>"
+		// $('.first_turn').append(avatarPlayerOne);
+		$('.first_turn').attr('id', avatar1);
+		// var avatarPlayerTwo = "";
+		// avatarPlayerTwo = "<img class='second_avatar' src='"+avatars[avatar2]+"''>"
+		// $('.second_turn').append(avatarPlayerTwo);
+		$('.second_turn').attr('id', avatar2);
 	}
 $('#gameNumber').append(gameNumber)
 
@@ -69,13 +72,13 @@ for (var i=0;i<9;i++) {
 
 // win fxn
 // if player array length <3, no winner yet - dont need to check
-// play array length - will determine loop - 
+// play array length - will determine loop -
 //gameBoardArray will show the board:  i.e.  C W D
 //											 D C W
 //											 W W C      which will be a win for cat
-// setting up current row/col/diag arrays from current gameboard array								 
+// setting up current row/col/diag arrays from current gameboard array
 function winnerDetermination () {
-	
+
 	if (
 		(gameBoardArray[0]==="C"&&gameBoardArray[3]==="C"&&gameBoardArray[6]==="C")||
 		(gameBoardArray[1]==="C"&&gameBoardArray[4]==="C"&&gameBoardArray[7]==="C")||
@@ -86,7 +89,7 @@ function winnerDetermination () {
 		(gameBoardArray[0]==="C"&&gameBoardArray[4]==="C"&&gameBoardArray[8]==="C")||
 		(gameBoardArray[2]==="C"&&gameBoardArray[4]==="C"&&gameBoardArray[6]==="C")
 		) {
-	
+
 		// winnerOfGame = "Cat";
 			if (side1 === "Cat") {
 				winningPlayer = 1;
@@ -97,7 +100,7 @@ function winnerDetermination () {
 			}
 			localStorage.setItem("winningPlayer", winningPlayer);
 			localStorage.setItem("recentGame", 1);
-			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);	
+			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);
 	} else if (
 		(gameBoardArray[0]==="D"&&gameBoardArray[3]==="D"&&gameBoardArray[6]==="D")||
 		(gameBoardArray[1]==="D"&&gameBoardArray[4]==="D"&&gameBoardArray[7]==="D")||
@@ -107,7 +110,7 @@ function winnerDetermination () {
 		(gameBoardArray[6]==="D"&&gameBoardArray[7]==="D"&&gameBoardArray[8]==="D")||
 		(gameBoardArray[0]==="D"&&gameBoardArray[4]==="D"&&gameBoardArray[8]==="D")||
 		(gameBoardArray[2]==="D"&&gameBoardArray[4]==="D"&&gameBoardArray[6]==="D")
-		)  { 
+		)  {
 			if (side1 === "Dog") {
 				winningPlayer = 1;
 				$('.first_avatar').toggleClass('seen');
@@ -117,7 +120,7 @@ function winnerDetermination () {
 			}
 			localStorage.setItem("winningPlayer", winningPlayer);
 			localStorage.setItem("recentGame", 1);
-			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);		
+			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);
 	} else if (counter === mouseGame) {
 		winningPlayer = 3;
 		localStorage.setItem("recentGame", 1);
@@ -162,13 +165,13 @@ $("button").on("click", function () {
 		if (side1 === "Dog"){
 			gameBoardArray[$(this).val()] = "D";
 			$('.dogGrowl')[0].play();
-			$(this).css('background-image', 'url(http://www.hd-wallpapersdownload.com/upload/bulk-upload/cute-puppy-photo.jpg)');
+			$(this).css('background-image', 'url("./Images/cute-puppy-photo.jpg")');
 			$(this).css('background-position', '-9px');
 			winnerDetermination();
 		} else {
 			gameBoardArray[$(this).val()] = "C";
 			$('.catMeow')[0].play();
-			$(this).css('background-image', 'url(http://www.img1.wikia.nocookie.net/__cb20140519075925/thehungergames/images/8/84/Kitten-16219-1280x800.jpg)');
+			$(this).css('background-image', 'url("./Images/cuteKitten.jpg")');
 			// win fxn
 			winnerDetermination();
 		}
@@ -180,17 +183,16 @@ $("button").on("click", function () {
 		if (side2 === "Dog"){
 			gameBoardArray[$(this).val()] = "D";
 			$('.dogGrowl')[0].play();
-			$(this).css('background-image', 'url(http://www.hd-wallpapersdownload.com/upload/bulk-upload/cute-puppy-photo.jpg)');
+			$(this).css('background-image', 'url("./Images/cute-puppy-photo.jpg")');
 			$(this).css('background-position', '-9px');
 			winnerDetermination();
 		} else {
 			gameBoardArray[$(this).val()] = "C";
 			$('.catMeow')[0].play();
-			$(this).css('background-image', 'url(http://www.img1.wikia.nocookie.net/__cb20140519075925/thehungergames/images/8/84/Kitten-16219-1280x800.jpg)');
+			$(this).css('background-image', 'url("./Images/cuteKitten.jpg")');
 			// win fxn
 			winnerDetermination();
-		}	
+		}
 	}
 });
 });
-

@@ -20,23 +20,23 @@
 		<ul id="gameRules">
 			<li>2 sides (Cats: X's) and (Dogs: O's)</li>
 			<li>Game board is a 3 x 3 grid</li>
-			<li>Players alternate turns placing an avatar (cat 
+			<li>Players alternate turns placing an avatar (cat
 	  or dog) in an available grid space</li>
 	  		<li>Victory conditions: 3 in a row (horizontal,
 	  vertical or diagonal)</li>
-	  		<li>Tie conditions - all spaces occupied but no 
+	  		<li>Tie conditions - all spaces occupied but no
 	  victory condition met</li>
 	</header>
 	<br><br><br>
 	<div id="nameAgeInput">
-	
+
 			First Player Name:
-			<input id="name0" type="text" name="name">
+			<input id="name0" type="text" name="name" maxlength="16">
 			Age:
 			<input id="age0" type="number" name="age">
   			Second Player Name:
-  			<input id="name1" type="text" name="name">
-  	
+  			<input id="name1" type="text" name="name" maxlength="16">
+
   			Age:
   			<input id="age1" type="number" name="age">
   			<br><br>
@@ -46,55 +46,55 @@
 	<div id="playOrder"></div>
 	<br>
 	<div id="sideSelection">
-		<button class ="choice" id = "catChoice" type="button" value="Cat"></button>	
+		<button class ="choice" id = "catChoice" type="button" value="Cat"></button>
 		<button class="choice" id = "dogChoice" type="button" value="Dog"></button>
 	</div>
 	<div id="catAvatar">
-			<button class="choice1" id="cat0" type="button" value="0"></button>
-			<button class="choice1" id="cat1" type="button" value="1"></button>
-			<button class="choice1" id="cat2"type="button" value="2"></button>
-			<button class="choice1" id="cat3"type="button" value="3"></button>
+			<button class="choice1" id="cat0" type="button" value="cat0"></button>
+			<button class="choice1" id="cat1" type="button" value="cat1"></button>
+			<button class="choice1" id="cat2"type="button" value="cat2"></button>
+			<button class="choice1" id="cat3"type="button" value="cat3"></button>
 	</div>
 	<div id="dogAvatar">
-			<button class="choice1" id="dog0" value="4"></button>
-			<button class="choice1" id="dog1" value="5"></button>
-			<button class="choice1" id="dog2" value="6"></button>
-			<button class="choice1" id="dog3" value="7"></button>
+			<button class="choice1" id="dog0" value="dog0"></button>
+			<button class="choice1" id="dog1" value="dog1"></button>
+			<button class="choice1" id="dog2" value="dog2"></button>
+			<button class="choice1" id="dog3" value="dog3"></button>
 	</div>
 
 		<div id="catAvatar2">
-			<button class="choice2" id="cat0" type="button" value="0"></button>
-			<button class="choice2" id="cat1" type="button" value="1"></button>
-			<button class="choice2" id="cat2"type="button" value="2"></button>
-			<button class="choice2" id="cat3"type="button" value="3"></button>
+			<button class="choice2" id="cat0" type="button" value="cat0"></button>
+			<button class="choice2" id="cat1" type="button" value="cat1"></button>
+			<button class="choice2" id="cat2"type="button" value="cat2"></button>
+			<button class="choice2" id="cat3"type="button" value="cat3"></button>
 	</div>
 	<div id="dogAvatar2">
-			<button class="choice2" id="dog0" value="4"></button>
-			<button class="choice2" id="dog1" value="5"></button>
-			<button class="choice2" id="dog2" value="6"></button>
-			<button class="choice2" id="dog3" value="7"></button>
+			<button class="choice2" id="dog0" value="dog0"></button>
+			<button class="choice2" id="dog1" value="dog1"></button>
+			<button class="choice2" id="dog2" value="dog2"></button>
+			<button class="choice2" id="dog3" value="dog3"></button>
 	</div>
 	<br><br>
 	<nav id="pageLink"><a id="playAnchor" href="context.html">Play Game</a></nav>
 
 	<!-- <div class="container">
 		<div class="row">
-		
+
 			<div class="box col-xs-4"><button id ="UL"></button></div>
 			<div class="box col-xs-4"><button id ="UM"></button></div>
 			<div class="box col-xs-4"><button id ="UR"></button></div>
-			
 
-			
+
+
 			<div class="box col-xs-4"><button id ="ML"></button></div>
 			<div class="box col-xs-4"><button id ="C"></button></div>
 			<div class="box col-xs-4"><button id ="MR"></button></div>
-			
-			
+
+
 			<div class="box col-xs-4"><button id ="LL"></button></div>
 			<div class="box col-xs-4"><button id ="LM"></button></div>
 			<div class="box col-xs-4"><button id ="LR"></button></div>
-			
+
 
 
 		</div>
