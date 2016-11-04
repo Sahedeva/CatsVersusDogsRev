@@ -1,8 +1,5 @@
 $(function () {
-$('#joyOde').on('canplaythrough', function() {
-    if(this.currentTime < 12){this.currentTime = 12;}
-    $('#joyOde')[0].play();
-});
+
 var name1 = localStorage.getItem("firstPlayer");
 var name2 = localStorage.getItem("secondPlayer");
 var side1 = localStorage.getItem("firstSide");
@@ -13,6 +10,33 @@ var winner = localStorage.getItem("winningPlayer");
 var gameNumber = localStorage.getItem("gameNumber");
 var recentGame = localStorage.getItem("recentGame");
 
+if (winner==1&&side1=='Cat'||winner==2&&side2=='Cat'){
+  $('#eyeTiger')[0].play();
+  $('#eyeTiger').on("ended", function() {
+    var aud = document.getElementById("joyOde");
+    aud.currentTime = 12;
+    aud.play();
+    // $('#joyOde').on('canplaythrough', function() {
+    //     if(this.currentTime < 12){this.currentTime = 12;}
+    //     $('#joyOde').attr('data-loop','1');
+    //     $('#joyOde')[0].play();
+    // });
+  });
+} else if (winner==1&&side1=='Dog'||winner==2&&side2=='Dog'){
+  $('#dogsOut')[0].play();
+  $('#dogsOut').on("ended", function() {
+    var aud = document.getElementById("joyOde");
+    aud.currentTime = 12;
+    aud.play();
+  });
+} else {
+  $('#whipWay')[0].play();
+  $('#whipWay').on("ended", function() {
+    var aud = document.getElementById("joyOde");
+    aud.currentTime = 12;
+    aud.play();
+  });
+}
 
 var oneWinner = name1 + "is Victorious!";
 var oneLoser = name1 + "is Defeated!";

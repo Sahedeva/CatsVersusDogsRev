@@ -100,7 +100,7 @@ function winnerDetermination () {
 			}
 			localStorage.setItem("winningPlayer", winningPlayer);
 			localStorage.setItem("recentGame", 1);
-			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);
+			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 1000);
 	} else if (
 		(gameBoardArray[0]==="D"&&gameBoardArray[3]==="D"&&gameBoardArray[6]==="D")||
 		(gameBoardArray[1]==="D"&&gameBoardArray[4]==="D"&&gameBoardArray[7]==="D")||
@@ -120,7 +120,7 @@ function winnerDetermination () {
 			}
 			localStorage.setItem("winningPlayer", winningPlayer);
 			localStorage.setItem("recentGame", 1);
-			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);
+			setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 1000);
 	} else if (counter === mouseGame) {
 		winningPlayer = 3;
 		localStorage.setItem("recentGame", 1);
@@ -130,7 +130,7 @@ function winnerDetermination () {
 		} else {
 			$('.second_avatar').toggleClass('seen');
 		}
-		setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 2000);
+		setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 1000);
 	}	else {
 		$('.first_avatar').toggleClass('seen');
 		$('.second_avatar').toggleClass('seen');
