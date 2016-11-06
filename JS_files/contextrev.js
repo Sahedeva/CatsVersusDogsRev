@@ -93,10 +93,10 @@ function winnerDetermination () {
 		// winnerOfGame = "Cat";
 			if (side1 === "Cat") {
 				winningPlayer = 1;
-				$('.first_avatar').toggleClass('seen');
+				$('.first_turn').toggleClass('seen');
 			} else {
 				winningPlayer = 2;
-				$('.second_avatar').toggleClass('seen');
+				$('.second_turn').toggleClass('seen');
 			}
 			localStorage.setItem("winningPlayer", winningPlayer);
 			localStorage.setItem("recentGame", 1);
@@ -113,10 +113,10 @@ function winnerDetermination () {
 		)  {
 			if (side1 === "Dog") {
 				winningPlayer = 1;
-				$('.first_avatar').toggleClass('seen');
+				$('.first_turn').toggleClass('seen');
 			} else {
 				winningPlayer = 2;
-				$('.second_avatar').toggleClass('seen');
+				$('.second_turn').toggleClass('seen');
 			}
 			localStorage.setItem("winningPlayer", winningPlayer);
 			localStorage.setItem("recentGame", 1);
@@ -126,19 +126,19 @@ function winnerDetermination () {
 		localStorage.setItem("recentGame", 1);
 		localStorage.setItem("winningPlayer", winningPlayer);
 		if (mouseGame%2 === 0) {
-			$('.first_avatar').toggleClass('seen');
+			$('.first_turn').toggleClass('seen');
 		} else {
-			$('.second_avatar').toggleClass('seen');
+			$('.second_turn').toggleClass('seen');
 		}
 		setTimeout(function(){ window.location.replace("WinnerAndHighScore.html"); }, 1000);
 	}	else {
-		$('.first_avatar').toggleClass('seen');
-		$('.second_avatar').toggleClass('seen');
+		$('.first_turn').toggleClass('seen');
+		$('.second_turn').toggleClass('seen');
 		return;
 	};
 };
 
-$('.first_avatar').toggleClass('seen')
+$('.first_turn').toggleClass('seen')
 
 $( "button" ).mouseenter(function() {
   if (gameBoardArray[$(this).val()] === "W"){

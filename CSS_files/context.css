@@ -174,5 +174,5 @@ h2 {
 }
 
 .seen {
-	visibility: visible;
+	visibility: visible!important;
 }
